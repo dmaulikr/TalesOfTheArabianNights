@@ -1176,7 +1176,7 @@ struct RandomEncounters {
                 matrix = chosenList[2]
                 
                 encounter = [adjective, encountered, matrix]
-                return encounter
+
             } else {
                 print("RandomEncounters.swift could not find encounter number list ", encounterNumber)
             }
@@ -1184,7 +1184,7 @@ struct RandomEncounters {
             print("RandomEncounters.swift received invalid die roll ", dieRoll)
         }
         
-        return nil //error
+        return encounter //if error, will be empty
     }
     
     //function to get the character encounter 
@@ -1203,14 +1203,14 @@ struct RandomEncounters {
                 adjective = encounterAdjective[encounterNumber]![dieRoll]!
                 
                 encounter = [adjective, character, matrix]
-                return encounter
+
             } else {
                 print("RandomEncounters.swift could not find character number list ", encounterNumber)
             }
         } else {
             print("RandomEncounters.swift received invalid die roll ", dieRoll)
         }
-        return nil //error
+        return encounter //if error, will be empty
     }
 
 }
