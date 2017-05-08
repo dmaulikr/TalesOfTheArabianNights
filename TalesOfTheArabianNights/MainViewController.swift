@@ -99,7 +99,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             error.view.tintColor = UIColor.black
             present(error, animated: true, completion: nil)
         }
-        
+    }
+    
+    @IBAction func imprisonedButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "imprisonedSegue", sender: self)
+    }
+    
+    @IBAction func matrixNButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "matrixNSegue", sender: self)
     }
     
     

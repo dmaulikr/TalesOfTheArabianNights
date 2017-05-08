@@ -6,15 +6,14 @@
 //  Copyright © 2017 Grace Thompson. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 //A list of possible encounters based off of encounter number and die roll, from 1 to 83 (random encounters)
 
-struct RandomEncounters {
+class RandomEncounters {
     
     
-    let encounterList: [[[String]]] = [[["Rock", "Slide", "F"], ["Rock", "Slide", "F"], //list1
+    let encounterList:[[[String]]] = [[["Rock", "Slide", "F"], ["Rock", "Slide", "F"], //list1
         ["Bloodthirsty", "Brigands", "I"],
         ["Lonely", "Prince", "A"],
         ["Mystic", "Fire", "F"],
@@ -25,8 +24,7 @@ struct RandomEncounters {
         ["Ghostly", "Beast", "J"],
         ["Ghostly", "Beast", "J"],
         ["All-Powerful", "'Efreet", "M"]],
-        //"list2"
-        [["Disguised", "Beggar", "C"],
+        [["Disguised", "Beggar", "C"], //"list2"
          ["Disguised", "Maiden", "L"],
          ["Greedy", "Captain", "I"],
          ["Terrible", "Storm", "F"],
@@ -38,8 +36,7 @@ struct RandomEncounters {
          ["Beautiful", "Enchantress", "O"],
          ["Huge", "Whirlpool", "F"],
          ["Huge", "Whirlpool", "F"]],
-        //"list3"
-        [["Greedy", "Ne'er-do-well", "D"],
+        [["Greedy", "Ne'er-do-well", "D"], //"list3"
          ["Lovesick", "Maiden", "L"],
          ["Bloodthirsty", "Brigands", "I"],
          ["Destitute", "Prophet", "A"],
@@ -51,8 +48,7 @@ struct RandomEncounters {
          ["Cold", "Wizard", "O"],
          ["Ancient", "City", "E"],
          ["Ancient", "City", "E"]],
-        //"list4"
-        [["Lost", "Merchant", "L"],
+        [["Lost", "Merchant", "L"], //"list4"
          ["Wicked", "Hag", "C"],
          ["Mad", "Slave", "D"],
          ["Friendly", "Merman", "I"],
@@ -64,8 +60,7 @@ struct RandomEncounters {
          ["Treacherous", "Shoals", "F"],
          ["Mad", "Captain", "I"],
          ["Terrible", "Storm", "F"]],
-        //"list5"
-        [["Talking", "Beast", "J"],
+        [["Talking", "Beast", "J"], //"list5"
          ["Friendly", "Hunchback", "C"],
          ["Wealthy", "Ne'er-do-well", "D"],
          ["Enchanted", "Maiden", "L"],
@@ -77,8 +72,7 @@ struct RandomEncounters {
          ["Mystic", "Fire", "F"],
          ["Talking", "Beast", "J"],
          ["Ancient", "City", "E"]],
-        //"list6"
-        [["Hideous", "Beggar", "C"],
+        [["Hideous", "Beggar", "C"], //"list6"
          ["Cheating", "Merchant", "L"],
          ["Skillful", "Thief", "D"],
          ["Doomsaying", "Prophet", "A"],
@@ -90,8 +84,7 @@ struct RandomEncounters {
          ["Mysterious", "Trapdoor", "E"],
          ["Strange", "Artifact", "E"],
          ["Ruined", "City", "E"]],
-        //"list7"
-        [["Destitute", "Merchant", "L"],
+        [["Destitute", "Merchant", "L"], //"list7"
          ["Armed", "Thief", "D"],
          ["Mild", "Storm", "F"],
          ["Rock", "Slide", "F"],
@@ -103,8 +96,7 @@ struct RandomEncounters {
          ["Magical", "Storm", "F"],
          ["Ruined", "City", "E"],
          ["Demonic", "'Efreet", "M"]],
-        //"list8"
-        [["Mild", "Storm", "F"],
+        [["Mild", "Storm", "F"], //"list8"
          ["Beautiful", "Shoals", "F"],
          ["Beautiful", "Shoals", "F"],
          ["Greedy", "Captain", "I"],
@@ -116,8 +108,7 @@ struct RandomEncounters {
          ["Mad", "Captain", "I"],
          ["Friendly", "Merman", "I"],
          ["Black", "Whirlpool", "F"]],
-        //"list9"
-        [["Dying", "Hag", "C"],
+        [["Dying", "Hag", "C"], //"list9"
          ["Wealthy", "Merchant", "L"],
          ["Multitudinous", "Brigands", "I"],
          ["Sand", "Storm", "F"],
@@ -129,8 +120,7 @@ struct RandomEncounters {
          ["Horrible", "Creatures", "J"],
          ["Mighty", "Wizard" , "O"],
          ["Wonderful", "Artifact", "E"]],
-        //"list10"
-        [["Old", "Man", "I"],
+        [["Old", "Man", "I"], //"list10"
          ["Diseased", "Hunchback", "C"],
          ["Mad", "Prophet", "A"],
          ["Powerful", "Dervish", "L"],
@@ -142,8 +132,7 @@ struct RandomEncounters {
          ["Terrible", "Storm", "F"],
          ["Ruined", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list11"
-        [["Foolish", "Slave", "D"],
+        [["Foolish", "Slave", "D"], //"list11"
          ["Ugly", "Beggar", "C"],
          ["Whirling", "Dervish", "L"],
          ["Mild", "Storm", "F"],
@@ -155,8 +144,7 @@ struct RandomEncounters {
          ["Glittering", "Artifact", "E"],
          ["Hidden", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list12"
-        [["Lovesick", "Thief", "D"],
+        [["Lovesick", "Thief", "D"], //"list12"
          ["Blind", "Man", "I"],
          ["Garrulous", "Soldier", "L"],
          ["House", "Fire", "F"],
@@ -168,8 +156,7 @@ struct RandomEncounters {
          ["Mystic", "Fire", "F"],
          ["Strange", "Artifact", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list13"
-        [["Disguised", "Soldier", "L"],
+        [["Disguised", "Soldier", "L"], //"list13"
          ["Runaway", "Slave", "D"],
          ["Mad", "Sage", "A"],
          ["Mild", "Storm", "F"],
@@ -181,8 +168,7 @@ struct RandomEncounters {
          ["Fabulous", "Treasure", "E"],
          ["Fabulous", "Treasure", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list14"
-        [["Repentant", "Thief", "D"],
+        [["Repentant", "Thief", "D"], //"list14"
          ["Imprisoned", "Maiden", "L"],
          ["Mad", "Prophet", "A"],
          ["Mild", "Storm", "F"],
@@ -194,8 +180,7 @@ struct RandomEncounters {
          ["Mad", "Captain", "I"],
          ["Terrible", "Storm", "F"],
          ["Fabulous", "Treasure", "E"]],
-        //"list15"
-        [["Blind", "Man", "I"],
+        [["Blind", "Man", "I"], //"list15"
          ["Strange", "Customs", "I"],
          ["Sand", "Storm", "F"],
          ["Unknown", "Beast", "J"],
@@ -207,8 +192,7 @@ struct RandomEncounters {
          ["Bloodthirsty", "Enchantress", "O"],
          ["Mighty", "Wizard", "O"],
          ["Beautiful", "'Efreeteh", "M"]],
-        //"list16"
-        [["Destitute", "Beggar", "C"],
+        [["Destitute", "Beggar", "C"], //"list16"
          ["Destitute", "Ne'er-do-well", "D"],
          ["Lonely", "Maiden", "L"],
          ["Mild", "Storm", "F"],
@@ -220,8 +204,7 @@ struct RandomEncounters {
          ["Malicious", "Merman", "I"],
          ["Ancient", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list17"
-        [["Garrulous", "Merchant", "L"],
+        [["Garrulous", "Merchant", "L"], //"list17"
          ["Lost", "Sage", "A"],
          ["Foolish", "Ne'er-do-well", "D"],
          ["Hideous", "Hunchback", "C"],
@@ -233,8 +216,7 @@ struct RandomEncounters {
          ["Small", "Artifact", "E"],
          ["Jeweled", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list18"
-        [["Impudent", "Hag", "C"],
+        [["Impudent", "Hag", "C"], //"list18"
          ["Cheating", "Merchant", "L"],
          ["Old", "Man", "I"],
          ["Armed", "Thief", "D"],
@@ -246,8 +228,7 @@ struct RandomEncounters {
          ["Secret", "Trapdoor", "E"],
          ["Ruined", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list19"
-        [["Foolish", "Ne'er-do-well", "D"],
+        [["Foolish", "Ne'er-do-well", "D"], //"list19"
          ["Mad", "Soldier", "L"],
          ["Dying", "Beggar", "C"],
          ["Doomsaying", "Prophet", "A"],
@@ -259,8 +240,7 @@ struct RandomEncounters {
          ["Talking", "Beast", "J"],
          ["Jeweled", "Trapdoor", "E"],
          ["Hiden", "City", "E"]],
-        //"list20"
-        [["Disguised", "Dervish", "L"],
+        [["Disguised", "Dervish", "L"], //"list20"
          ["Mild", "Storm", "F"],
          ["Skillful", "Thief", "D"],
          ["Insane", "Hunchback", "C"],
@@ -272,8 +252,7 @@ struct RandomEncounters {
          ["Mad", "Captain", "I"],
          ["Small", "Artifact", "E"],
          ["Terrible", "Storm", "F"]],
-        //"list21"
-        [["Diseased", "Hag", "C"],
+        [["Diseased", "Hag", "C"], //"list21"
          ["Whirling", "Dervish", "L"],
          ["Bloodthirsty", "Brigands", "I"],
          ["Destitute", "Prince", "A"],
@@ -285,8 +264,7 @@ struct RandomEncounters {
          ["Mysterious", "Trapdoor", "E"],
          ["Jeweled", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list22"
-        [["Lovesick", "Ne'er-do-well", "D"],
+        [["Lovesick", "Ne'er-do-well", "D"], //"list22"
          ["Needy", "Thief", "D"],
          ["Friendly", "Hag", "C"],
          ["Strange", "Customs", "I"],
@@ -298,8 +276,7 @@ struct RandomEncounters {
          ["Beautiful", "Enchantress", "O"],
          ["Angry", "'Efreeteh", "M"],
          ["Angry", "'Efreeteh", "M"]],
-        //list23"
-        [["Toothless", "Hunchback", "C"],
+        [["Toothless", "Hunchback", "C"], //list23"
          ["Terrible", "Storm", "F"],
          ["Lonely", "Prophet", "A"],
          ["Vengeful", "Soldier", "L"],
@@ -311,8 +288,7 @@ struct RandomEncounters {
          ["Strange", "Artifact", "E"],
          ["Ghostly", "Beast","J"],
          ["Fabulous", "Treasure", "E"]],
-        // "list24"
-        [["Hideous", "Beggar", "C"],
+        [["Hideous", "Beggar", "C"], // "list24"
          ["Beautiful", "Maiden", "L"],
          ["Blind", "Man", "I"],
          ["Wise", "Sage", "A"],
@@ -324,8 +300,7 @@ struct RandomEncounters {
          ["Wicked", "Vizier", "I"],
          ["Secret", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list25"
-        [["Needy", "Ne'er-do-well", "D"],
+        [["Needy", "Ne'er-do-well", "D"], //"list25"
          ["False", "Prophet", "A"],
          ["Dying", "Hag", "C"],
          ["Imprisoned", "Maiden", "L"],
@@ -337,8 +312,7 @@ struct RandomEncounters {
          ["Talking", "Beast", "J"],
          ["Terrible", "Storm", "F"],
          ["Wonderful", "Artifact", "E"]],
-        //"list26"
-        [["Runaway", "Ne'er-do-well", "D"],
+        [["Runaway", "Ne'er-do-well", "D"], //"list26"
          ["Handsome", "Soldier", "L"],
          ["Lost", "Sage", "A"],
          ["Lovesick", "Hag", "C"],
@@ -350,8 +324,7 @@ struct RandomEncounters {
          ["Dark", "Creatures", "J"],
          ["Black", "Whirlpool", "F"],
          ["Black", "Whirlpool", "F"]],
-        //"list27"
-        [["Garrulous", "Sage", "A"],
+        [["Garrulous", "Sage", "A"], //"list27
          ["Drunken", "Beggar", "C"],
          ["Mad", "Thief", "D"],
          ["Friendly", "Maiden", "L"],
@@ -363,8 +336,7 @@ struct RandomEncounters {
          ["Egg", "of Roc", "J"],
          ["Small", "Artifact", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list28"
-        [["Impudent", "Hunchback", "C"],
+        [["Impudent", "Hunchback", "C"], //"list28"
          ["Drunken", "Ne'er-do-well", "D"],
          ["Old", "Man", "I"],
          ["Wicked", "Dervish", "L"],
@@ -376,8 +348,7 @@ struct RandomEncounters {
          ["Mad", "Captain", "I"],
          ["Malicious", "Merman", "I"],
          ["Treacherous", "Shoals", "F"]],
-        //"list29"
-        [["Cheating", "Merchant", "L"],
+        [["Cheating", "Merchant", "L"], //"list29"
          ["Cheating", "Merchant", "L"],
          ["Unknown", "Beast", "J"],
          ["Minor", "Treasure", "E"],
@@ -389,8 +360,7 @@ struct RandomEncounters {
          ["Learned", "'Efreeteh", "M"],
          ["Noble", "'Efreet", "M"],
          ["Noble", "'Efreet", "M"]],
-        //"list30"
-        [["Runaway", "Ne'er-do-well", "D"],
+        [["Runaway", "Ne'er-do-well", "D"], //"list30"
          ["Drunken", "Hunchback", "C"],
          ["Con", "Game", "I"],
          ["House", "Fire", "F"],
@@ -402,8 +372,7 @@ struct RandomEncounters {
          ["Secret", "Trapdoor", "E"],
          ["Guarded", "Treasure", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list31"
-        [["Drunken", "Hag", "C"],
+        [["Drunken", "Hag", "C"], //"list31"
          ["Lost", "Merchant", "L"],
          ["Repentant", "Thief", "D"],
          ["Blind", "Man", "I"],
@@ -415,8 +384,7 @@ struct RandomEncounters {
          ["Talking", "Beast", "J"],
          ["Terrible", "Storm", "F"],
          ["Guarded", "Treasure", "E"]],
-        //"list32"
-        [["Adulterous", "Slave", "D"],
+        [["Adulterous", "Slave", "D"], //"list32"
          ["Lovesick", "Beggar", "C"],
          ["Mild", "Storm", "F"],
          ["Friendly", "Merman", "I"],
@@ -428,8 +396,7 @@ struct RandomEncounters {
          ["Small", "Artifact", "E"],
          ["Terrible", "Storm", "F"],
          ["Huge", "Whirlpool", "F"]],
-        //"list33"
-        [["Happy", "Ne'er-do-well", "D"],
+        [["Happy", "Ne'er-do-well", "D"], //"list33"
          ["Disguised", "Merchant", "L"],
          ["Dangerous", "Hunchback", "C"],
          ["Sand", "Storm", "F"],
@@ -441,8 +408,7 @@ struct RandomEncounters {
          ["Sand", "Storm", "F"],
          ["Sand", "Storm", "F"],
          ["Strange", "Artifact", "E"]],
-        //"list34"
-        [["Ugly", "Hag", "C"],
+        [["Ugly", "Hag", "C"], //"list34"
          ["Friendly", "Soldier", "L"],
          ["Destitute", "Thief", "D"],
          ["Beautiful", "Shoals", "F"],
@@ -454,8 +420,7 @@ struct RandomEncounters {
          ["Mysterious", "River", "F"],
          ["Horrible", "Creatures", "J"],
          ["Fabulous", "Treasure", "E"]],
-        //"list35"
-        [["Repentant", "Ne'er-do-well", "D"],
+        [["Repentant", "Ne'er-do-well", "D"], //"list35"
          ["Lovesick", "Soldier", "L"],
          ["Crafty", "Hag", "C"],
          ["Merry", "Brigands", "I"],
@@ -467,8 +432,7 @@ struct RandomEncounters {
          ["Hungry", "Gooleh", "I"],
          ["House", "Fire", "F"],
          ["Mysterious", "Trapdoor", "E"]],
-        //"list36"
-        [["Destitute", "Hag", "C"],
+        [["Destitute", "Hag", "C"], //"list36"
          ["Enchanted", "Soldier", "L"],
          ["Imprisoned", "Maiden", "L"],
          ["Repentant", "Merchant", "D"],
@@ -480,8 +444,7 @@ struct RandomEncounters {
          ["Lovesick", "'Efreeteh", "M"],
          ["Trapped", "'Efreet", "M"],
          ["Angry", "'Efreet", "M"]],
-        //"list37"
-        [["Repentant", "Merchant", "D"],
+        [["Repentant", "Merchant", "D"], //"list37"
          ["Flying", "Creatures", "J"],
          ["Dark", "River", "F"],
          ["Ghostly", "Beast", "J"],
@@ -493,8 +456,7 @@ struct RandomEncounters {
          ["Bumbling", "Wizard", "B"],
          ["Evil", "Enchantress", "B"],
          ["Noble", "'Efreet", "M"]],
-        //"list38"
-        [["Heart-rending", "Hag", "C"],
+        [["Heart-rending", "Hag", "C"], //"list38"
          ["Disguised", "Dervish", "L"],
          ["Friendly", "Princess", "A"],
          ["Sad", "Gooleh", "I"],
@@ -506,8 +468,7 @@ struct RandomEncounters {
          ["Mysterious", "Trapdoor", "E"],
          ["Glittering", "Artifact", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list39"
-        [["Old", "Man", "I"],
+        [["Old", "Man", "I"], //"list39"
          ["Impudent", "Beggar", "C"],
          ["Runaway", "Slave", "D"],
          ["Destitute", "Merchant", "L"],
@@ -519,8 +480,7 @@ struct RandomEncounters {
          ["Dark", "Creatures", "J"],
          ["Ancient", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list40"
-        [["Repentant", "Merchant", "D"],
+        [["Repentant", "Merchant", "D"], //"list40"
          ["Runaway", "Slave", "D"],
          ["Wicked", "BEggar", "C"],
          ["Greedy", "Thief", "D"],
@@ -532,8 +492,7 @@ struct RandomEncounters {
          ["Secret", "Trapdoor", "E"],
          ["Hidden", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list41"
-        [["House", "Fire", "F"],
+        [["House", "Fire", "F"], //"list41"
          ["Hypnotic", "Hag", "C"],
          ["Fine", "Beast", "J"],
          ["Strange", "Customs", "I"],
@@ -545,8 +504,7 @@ struct RandomEncounters {
          ["Glittering", "Artifact", "E"],
          ["Guarded", "Treasure", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list42"
-        [["Adulterous", "Ne'er-do-well", "D"],
+        [["Adulterous", "Ne'er-do-well", "D"], //"list42"
          ["Friendly", "Beggar", "C"],
          ["Healer", "Sage", "A"],
          ["Merry", "Brigands", "I"],
@@ -558,8 +516,7 @@ struct RandomEncounters {
          ["Jeweled", "Trapdoor", "E"],
          ["Bloodthirsty", "Brigands", "I"],
          ["Wonderful", "Artifact", "E"]],
-        //"list43"
-        [["Friendly", "Merman", "I"],
+        [["Friendly", "Merman", "I"], //"list43"
          ["Friendly", "Merman", "I"],
          ["Fearful", "Captain", "I"],
          ["Treacherous", "Shoals", "F"],
@@ -571,8 +528,7 @@ struct RandomEncounters {
          ["Friendly", "Merman", "I"],
          ["Huge", "Whirlpool", "F"],
          ["Black", "Whirlpool", "F"]],
-        //"list44"
-        [["Destitute", "Thief", "D"],
+        [["Destitute", "Thief", "D"], //"list44"
          ["Wicked", "Prophet", "A"],
          ["Sand", "Storm", "F"],
          ["Sand", "Storm", "F"],
@@ -584,8 +540,7 @@ struct RandomEncounters {
          ["Ruined", "City", "E"],
          ["Fabulous", "Treasure", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list45"
-        [["Repentant", "Ne'er-do-well", "D"],
+        [["Repentant", "Ne'er-do-well", "D"], //"list45"
          ["Wicked", "Hunchback", "C"],
          ["False", "Sage", "A"],
          ["Wicked", "Dervish", "L"],
@@ -597,8 +552,7 @@ struct RandomEncounters {
          ["Mysterious", "River", "F"],
          ["Black", "Whirlpool", "F"],
          ["Wonderful", "Artifact", "E"]],
-        //"list46"
-        [["Lovesick", "Beggar", "C"],
+        [["Lovesick", "Beggar", "C"], //"list46"
          ["Foolish", "Slave", "D"],
          ["Lost", "Dervish", "L"],
          ["False", "Prophet", "A"],
@@ -610,8 +564,7 @@ struct RandomEncounters {
          ["Horrible", "Creatures", "J"],
          ["Jeweled", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list47"
-        [["Lovesick", "Hunchback", "C"],
+        [["Lovesick", "Hunchback", "C"], //"list47"
          ["Lonely", "Soldier", "L"],
          ["Foolish", "Thief", "D"],
          ["Small", "Artifact", "E"],
@@ -623,8 +576,7 @@ struct RandomEncounters {
          ["Black", "River", "F"],
          ["Guarded", "Treasure", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list48"
-        [["Happy", "Ne'er-do-well", "D"],
+        [["Happy", "Ne'er-do-well", "D"], //"list48"
          ["Dangerous", "Beggar", "C"],
          ["Foolish", "Prince", "A"],
          ["Friendly", "Merman", "I"],
@@ -636,8 +588,7 @@ struct RandomEncounters {
          ["Small", "Artifact", "E"],
          ["Huge", "Whirlpool", "F"],
          ["Huge", "Whirlpool", "F"]],
-        //"list49"
-        [["Fine", "Beast", "J"],
+        [["Fine", "Beast", "J"], //"list49"
          ["Enchanted", "Beast", "J"],
          ["Sad", "Gooleh", "I"],
          ["Talking", "Beast", "J"],
@@ -649,8 +600,7 @@ struct RandomEncounters {
          ["Noble", "Enchantress", "B"],
          ["Lovesick", "'Efreeteh", "M"],
          ["Kindly", "'Efreet", "M"]],
-        //"list50"
-        [["Drunken", "Slave", "D"],
+        [["Drunken", "Slave", "D"], //"list50"
          ["Insane", "Beggar", "C"],
          ["Garrulous", "Maiden", "L"],
          ["Vengeful", "Sage", "A"],
@@ -662,8 +612,7 @@ struct RandomEncounters {
          ["Demonic", "'Efreet", "M"],
          ["Fabulous", "Treasure", "E"],
          ["Guarded", "Treasure", "E"]],
-        // "list51"
-        [["Destitute", "Sage", "A"],
+        [["Destitute", "Sage", "A"], // "list51"
          ["Wise", "Thief", "D"],
          ["Insane", "Hunchback", "C"],
          ["Enchanted", "Soldier", "L"],
@@ -675,8 +624,7 @@ struct RandomEncounters {
          ["Glittering", "Artifact", "E"],
          ["Fabulous", "Treasure", "E"],
          ["Fabulous", "Treasure", "E"]],
-        //"list52"
-        [["Lovesick", "Slave", "D"],
+        [["Lovesick", "Slave", "D"], //"list52"
          ["Foolish", "Maiden", "L"],
          ["Insane", "Hag", "C"],
          ["Vengeful", "Princess", "A"],
@@ -688,8 +636,7 @@ struct RandomEncounters {
          ["Ruined", "City", "E"],
          ["Magical", "Storm", "F"],
          ["Wonderful", "Artifact", "E"]],
-        //"list53"
-        [["Wise", "Slave", "D"],
+        [["Wise", "Slave", "D"], //"list53"
          ["Dying", "Hunchback", "C"],
          ["Healer", "Sage", "A"],
          ["Mild", "Storm", "F"],
@@ -701,8 +648,7 @@ struct RandomEncounters {
          ["Terrible", "Storm", "F"],
          ["Huge", "Whirlpool", "F"],
          ["Hidden", "City", "E"]],
-        //"list54"
-        [["Lovesick", "Hag", "C"],
+        [["Lovesick", "Hag", "C"], //"list54"
          ["Disguised", "Slave", "D"],
          ["Sad", "Gooleh", "I"],
          ["Dark", "Creatures", "J"],
@@ -714,8 +660,7 @@ struct RandomEncounters {
          ["Crafty", "Wizard", "O"],
          ["Bloodthirsty", "Enchantress", "O"],
          ["Trapped", "'Efreet", "M"]],
-        // "list55"
-        [["Wise", "Slave", "D"],
+        [["Wise", "Slave", "D"], // "list55"
          ["Lost", "Soldier", "L"],
          ["Disguised", "Hunchback", "C"],
          ["Mild", "Storm", "F"],
@@ -727,8 +672,7 @@ struct RandomEncounters {
          ["Mysterious", "Trapdoor", "E"],
          ["Ancient", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list56"
-        [["Toothless", "Hag", "C"],
+        [["Toothless", "Hag", "C"], //"list56"
          ["Greedy", "Thief", "D"],
          ["Old", "Man", "I"],
          ["House", "Fire", "F"],
@@ -740,8 +684,7 @@ struct RandomEncounters {
          ["Wicked", "Vizier", "I"],
          ["Dark", "Creatures", "J"],
          ["Fabulous", "Treasure", "E"]],
-        //"list57"
-        [["Needy", "Ne'er-do-well", "D"],
+        [["Needy", "Ne'er-do-well", "D"], //"list57"
          ["Dangerous", "Beggar", "C"],
          ["Mad", "Maiden", "L"],
          ["Wise", "Prince", "A"],
@@ -753,8 +696,7 @@ struct RandomEncounters {
          ["Horrible", "Creatures", "J"],
          ["Glittering", "Artifact", "E"],
          ["Glittering", "Artifact", "E"]],
-        //"list58"
-        [["Busy", "Slave", "D"],
+        [["Busy", "Slave", "D"], //"list58"
          ["Destitute", "Merchant", "L"],
          ["Insane", "Beggar", "C"],
          ["Healer", "Sage", "A"],
@@ -766,8 +708,7 @@ struct RandomEncounters {
          ["Demonic", "'Efreet", "M"],
          ["Glittering", "Artifact","E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list59"
-        [["Mild", "Storm", "F"],
+        [["Mild", "Storm", "F"], //"list59"
          ["Flying", "Creatures", "J"],
          ["Fine", "Beast", "J"],
          ["Blind", "Man", "I"],
@@ -779,8 +720,7 @@ struct RandomEncounters {
          ["Lovesick", "'Efreet", "M"],
          ["Evil", "'Efreeteh", "M"],
          ["Learned", "'Efreet", "M"]],
-        //"list60"
-        [["Foolish", "Slave", "D"],
+        [["Foolish", "Slave", "D"], //"list60"
          ["Heart-rending", "Beggar", "C"],
          ["Lovesick", "Maiden", "L"],
          ["Fine", "Beast", "J"],
@@ -792,8 +732,7 @@ struct RandomEncounters {
          ["Strange", "Customs", "I"],
          ["Secret", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list61"
-        [["Ugly", "Hag", "C"],
+        [["Ugly", "Hag", "C"], //"list61"
          ["Skillful", "Thief", "D"],
          ["Wealthy", "Merchant", "L"],
          ["Enchanted", "Merchant", "A"],
@@ -805,8 +744,7 @@ struct RandomEncounters {
          ["Huge", "Whirlpool", "F"],
          ["Hidden", "City", "E"],
          ["Strange", "Artifact", "E"]],
-        //"list62"
-        [["Busy", "Slave", "D"],
+        [["Busy", "Slave", "D"], //"list62"
          ["Wicked", "Sage", "A"],
          ["Insane", "Beggar", "C"],
          ["Enchanted", "Sage", "A"],
@@ -818,8 +756,7 @@ struct RandomEncounters {
          ["Glittering", "Artifact", "E"],
          ["Ancient", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        // "list63"
-        [["Foolish", "Soldier", "L"],
+        [["Foolish", "Soldier", "L"], // "list63"
          ["Runaway", "Ne'er-do-well", "D"],
          ["Old", "Man", "I"],
          ["Enchanted", "Hunchback", "C"],
@@ -831,8 +768,7 @@ struct RandomEncounters {
          ["Black", "Whirlpool", "F"],
          ["Black", "Whirlpool", "F"],
          ["Mysterious", "Trapdoor", "E"]],
-        //"list64"
-        [["Heart-rending", "Hag", "C"],
+        [["Heart-rending", "Hag", "C"], //"list64"
          ["Handsome", "Merchant", "A"],
          ["Armed", "Ne'er-do-well", "D"],
          ["Mild", "Storm", "F"],
@@ -844,8 +780,7 @@ struct RandomEncounters {
          ["Horrible", "Creatures", "J"],
          ["Bloodthirsty", "Wizard", "O"],
          ["Strange", "Artifact", "E"]],
-        //"list65"
-        [["Crafty", "Ne'er-do-well", "D"],
+        [["Crafty", "Ne'er-do-well", "D"], //"list65"
          ["Minor", "Treasure", "E"],
          ["Beautiful", "Princess", "A"],
          ["Small", "Artifact", "E"],
@@ -857,8 +792,7 @@ struct RandomEncounters {
          ["Ancient", "City", "E"],
          ["Angry", "'Efreet", "M"],
          ["Learned", "Wizard", "B"]],
-        //"list66"
-        [["Adulterous", "Thief", "D"],
+        [["Adulterous", "Thief", "D"], //"list66"
          ["Mad", "Soldier", "L"],
          ["Old", "Man", "I"],
          ["Fearful", "Captain", "I"],
@@ -870,8 +804,7 @@ struct RandomEncounters {
          ["Malicious", "Merman", "I"],
          ["Small", "Artifact", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list67"
-        [["Drunken", "Thief", "D"],
+        [["Drunken", "Thief", "D"], //"list67"
          ["Mild", "Storm", "F"],
          ["Merry", "Brigands", "I"],
          ["Hypnotic", "Beggar", "C"],
@@ -883,8 +816,7 @@ struct RandomEncounters {
          ["Jeweled", "Trapdoor", "E"],
          ["Hidden", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list68"
-        [["Happy", "Slave", "D"],
+        [["Happy", "Slave", "D"], //"list68"
          ["Crafty", "Beggar", "C"],
          ["Mad", "Sage", "A"],
          ["Mad", "Prophet", "A"],
@@ -896,8 +828,7 @@ struct RandomEncounters {
          ["All-Powerful", "'Efreeteh", "M"],
          ["Lovesick", "'Efreet", "M"],
          ["Beautiful", "Enchantress", "O"]],
-        //"list69"
-        [["Foolish", "Thief", "D"],
+        [["Foolish", "Thief", "D"], //"list69"
          ["Wicked", "Beggar", "C"],
          ["Lonely", "Maiden", "L"],
          ["Mild", "Stom", "F"],
@@ -909,8 +840,7 @@ struct RandomEncounters {
          ["Ancient", "City", "E"],
          ["Terrible", "Storm", "F"],
          ["Wonderful", "Artifact", "E"]],
-        //"list70"
-        [["Flying", "Creatures", "J"],
+        [["Flying", "Creatures", "J"], //"list70"
          ["Bloodthirsty", "Brigands", "I"],
          ["Unknown", "Beast", "J"],
          ["Unknown", "Beast", "J"],
@@ -922,8 +852,7 @@ struct RandomEncounters {
          ["Ruined", "City", "E"],
          ["Noble", "'Efreet", "M"],
          ["Powerful", "Wizard", "B"]],
-        //"list71"
-        [["Destitute", "Hunchback", "C"],
+        [["Destitute", "Hunchback", "C"], //"list71"
          ["Friendly", "Prophet", "A"],
          ["Mad", "Ne'er-do-well", "D"],
          ["Whirling", "Dervish", "L"],
@@ -935,8 +864,7 @@ struct RandomEncounters {
          ["Fine", "Beast", "J"],
          ["Fine", "Beast", "J"],
          ["Wonderful", "Artifact", "E"]],
-        //"list72"
-        [["Impudent", "Hunchback", "C"],
+        [["Impudent", "Hunchback", "C"], //"list72"
          ["Wicked", "Ne'er-do-well", "D"],
          ["Handsome", "Soldier", "L"],
          ["Lonely", "Prophet", "A"],
@@ -948,8 +876,7 @@ struct RandomEncounters {
          ["Small", "Artifact", "E"],
          ["Mighty", "Enchantress", "O"],
          ["Magical", "Storm", "F"]],
-        //"list73"
-        [["Cheating", "Merchant", "L"],
+        [["Cheating", "Merchant", "L"], //"list73"
          ["Lonely", "Prophet", "A"],
          ["Diseased", "Hunchback", "C"],
          ["Friendly", "Merman", "I"],
@@ -961,8 +888,7 @@ struct RandomEncounters {
          ["Terrible", "Storm", "F"],
          ["Black", "Whirlpool", "F"],
          ["Huge", "Whirlpool", "F"]],
-        //"list74"
-        [["Needy", "Ne'er-do-well", "D"],
+        [["Needy", "Ne'er-do-well", "D"], //"list74"
          ["Powerful", "Slave", "D"],
          ["Lovesick", "Maiden", "L"],
          ["Mad", "Prophet", "A"],
@@ -974,8 +900,7 @@ struct RandomEncounters {
          ["Magical", "Storm", "F"],
          ["Bumbling", "Enchantress", "B"],
          ["Enchanted", "Beast", "J"]],
-        //"list75"
-        [["Mild", "Storm", "F"],
+        [["Mild", "Storm", "F"], //"list75"
          ["Blind", "Man", "I"],
          ["Rock", "Slide", "F"],
          ["Mysterious", "River", "F"],
@@ -987,8 +912,7 @@ struct RandomEncounters {
          ["Enchanted", "Beast", "J"],
          ["Ruined", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list76"
-        [["Drunken", "Ne'er-do-well", "D"],
+        [["Drunken", "Ne'er-do-well", "D"], //"list76"
          ["Lost", "Prophet", "A"],
          ["Dangerous", "Hag", "C"],
          ["Powerful", "Dervish", "L"],
@@ -1000,8 +924,7 @@ struct RandomEncounters {
          ["Black", "Whirlpool", "F"],
          ["Huge", "Whirlpool", "F"],
          ["Wonderful", "Artifact", "E"]],
-        //"list77"
-        [["Lovesick", "Soldier", "L"],
+        [["Lovesick", "Soldier", "L"], //"list77"
          ["Lost", "Maiden", "L"],
          ["Disguised", "Slave", "D"],
          ["Egg", "of Roc", "J"],
@@ -1013,8 +936,7 @@ struct RandomEncounters {
          ["Cold", "Wizard", "O"],
          ["Fabulous", "Treasure", "E"],
          ["Wonderful", "Treasure", "E"]],
-        //"list78"
-        [["Armed", "Slave", "D"],
+        [["Armed", "Slave", "D"], //"list78"
          ["Mild", "Storm", "F"],
          ["Puissant", "Soldier", "L"],
          ["Merry", "Brigands", "I"],
@@ -1026,8 +948,7 @@ struct RandomEncounters {
          ["Friendly", "Merman", "I"],
          ["Talking", "Beast", "J"],
          ["Black", "Whirlpool", "F"]],
-        //"list79"
-        [["Lonely", "Soldier", "L"],
+        [["Lonely", "Soldier", "L"], //"list79"
          ["Friendly", "Beggar", "C"],
          ["Foolish", "Thief", "D"],
          ["Garrulous", "Sage", "A"],
@@ -1039,8 +960,7 @@ struct RandomEncounters {
          ["Unknown", "Beast", "J"],
          ["Secret", "Trapdoor", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list80"
-        [["Mild", "Storm", "F"],
+        [["Mild", "Storm", "F"], //"list80"
          ["Wicked", "Vizier", "I"],
          ["Mad", "Captain", "I"],
          ["Friendly", "Merman", "I"],
@@ -1052,8 +972,7 @@ struct RandomEncounters {
          ["Strange", "Artifact", "E"],
          ["Ruined", "City", "E"],
          ["Wonderful", "Artifact", "E"]],
-        //"list81"
-        [["Old", "Man", "I"],
+        [["Old", "Man", "I"], //"list81"
          ["Wealthy", "Merchant", "D"],
          ["Mild", "Storm", "F"],
          ["Rock", "Slide", "F"],
@@ -1065,8 +984,7 @@ struct RandomEncounters {
          ["Mad", "Wizard", "O"],
          ["Practical Joker", "Enchantress", "O"],
          ["All-Powerful", "'Efreeteh", "M"]],
-        //"list82"
-        [["Destitute", "Thief", "D"],
+        [["Destitute", "Thief", "D"], //"list82"
          ["Dying", "Beggar", "C"],
          ["Mild", "Storm", "F"],
          ["Handsome", "Prince", "A"],
@@ -1078,8 +996,7 @@ struct RandomEncounters {
          ["Terrible", "Storm", "F"],
          ["Ruined", "City", "E"],
          ["Ruined", "City", "E"]],
-        //"list83"
-        [["Toothless", "Hag", "C"],
+        [["Toothless", "Hag", "C"], //"list83"
          ["Disguised", "Slave", "D"],
          ["Blind", "Man", "I"],
          ["Egg", "of Roc", "J"],
@@ -1090,75 +1007,73 @@ struct RandomEncounters {
          ["Enchanted", "Beast", "J"],
          ["All-Powerful", "'Efreet", "M"],
          ["Strange", "Artifact", "E"],
-         ["Hidden", "City", "E"]]
-    ]
+         ["Hidden", "City", "E"]]]
     
-    let encounterCharacter: [Int: [String: String]] = [84: ["character" : "Wizard", "matrix" : "B"],
-                                                       85: ["character" : "Prophet or Sage", "matrix" : "A"],
-                                                       86: ["character" : "Hunchback, Hag, or Beggar", "matrix" : "C"],
-                                                       87: ["character" : "Prince", "matrix" : "A"],
-                                                       88: ["character" : "Wizard", "matrix" : "B"],
-                                                       90: ["character" : "Sage or Prophet", "matrix" : "A"],
-                                                       91: ["character" : "Hag, Hunchback, or Beggar", "matrix" : "C"],
-                                                       92: ["character" : "Thief, Ne'er-do-well, or Slave", "matrix" : "D"],
-                                                       93: ["character" : "Prince", "matrix" : "A"],
-                                                       94: ["character" : "'Efreet", "matrix" : "M"],
-                                                       95: ["character" : "Wizard", "matrix" : "B"],
-                                                       97: ["character" : "Thief or Slave", "matrix" : "D"],
-                                                       98: ["character" : "Prophet", "matrix" : "A"],
-                                                       99: ["character" : "Sage", "matrix" : "A"],
-                                                       100: ["character" : "Hag", "matrix" : "C"],
-                                                       101: ["character" : "Hunchback", "matrix" : "C"],
-                                                       102: ["character" : "Prince", "matrix" : "A"],
-                                                       105: ["character" : "Beggar", "matrix" : "C"],
-                                                       106: ["character" : "Thief", "matrix" : "D"],
-                                                       107: ["character" : "Ne'er-do-well or Slave", "matrix" : "D"],
-                                                       108: ["character" : "Ne'er-do-well", "matrix" : "D"],
-                                                       109: ["character" : "Princess", "matrix" : "A"],
-                                                       110: ["character" : "Princess", "matrix" : "A"],
-                                                       113: ["character" : "Princess", "matrix" : "A"],
-                                                       114: ["character" : "Enchantress", "matrix" : "B"],
-                                                       115: ["character" : "Enchantress", "matrix" : "B"],
-                                                       116: ["character" : "'Efreeteh", "matrix" : "M"],
-                                                       117: ["character" : "Enchantress", "matrix" : "B"],
-                                                       118: ["character" : "'Efreet", "matrix" : "M"],
-                                                       119: ["character" : "'Efreet", "matrix" : "M"],
-                                                       120: ["character" : "'Efreeteh", "matrix" : "M"],
-                                                       121: ["character" : "'Efreeteh", "matrix" : "M"]]
+    let encounterCharacter: [Int:[String]] = [84: ["Wizard", "B"],
+                                             85: ["Prophet or Sage", "A"],
+                                             86: ["Hunchback, Hag, or Beggar", "C"],
+                                             87: ["Prince", "A"],
+                                             88: ["Wizard", "B"],
+                                             90: ["Sage or Prophet", "A"],
+                                             91: ["Hag, Hunchback, or Beggar", "C"],
+                                             92: ["Thief, Ne'er-do-well, or Slave", "D"],
+                                             93: ["Prince", "A"],
+                                             94: ["'Efreet", "M"],
+                                             95: ["Wizard", "B"],
+                                             97: ["Thief or Slave", "D"],
+                                             98: ["Prophet", "A"],
+                                             99: ["Sage", "A"],
+                                             100: ["Hag", "C"],
+                                             101: ["Hunchback", "C"],
+                                             102: ["Prince", "A"],
+                                             105: ["Beggar", "C"],
+                                             106: ["Thief", "D"],
+                                             107: ["Ne'er-do-well or Slave", "D"],
+                                             108: ["Ne'er-do-well", "D"],
+                                             109: ["Princess", "A"],
+                                             110: ["Princess", "A"],
+                                             113: ["Princess", "A"],
+                                             114: ["Enchantress", "B"],
+                                             115: ["Enchantress", "B"],
+                                             116: ["'Efreeteh", "M"],
+                                             117: ["Enchantress", "B"],
+                                             118: ["'Efreet", "M"],
+                                             119: ["'Efreet", "M"],
+                                             120: ["'Efreeteh", "M"],
+                                             121: ["'Efreeteh", "M"]]
     
-    let encounterAdjective: [Int: [Int: String]] = [84: [1: "Kindly", 2: "Bumbling", 3: "Needy", 4: "Needy", 5: "Disguised", 6: "Trapped", 7: "Mad", 8: "Mad", 9: "Evil", 10: "Vengeful", 11: "Doomed", 12: "Mighty"],
-                                                    85: [1: "Lonely", 2: "Garrulous", 3: "Destitute", 4: "Foolish", 5: "Friendly", 6: "Imprisoned", 7: "Disguised", 8: "Mad", 9: "Vengeful", 10: "Wicked", 11: "Enchanted", 12: "Enchanted"],
-                                                    86: [1: "Friendly", 2: "Friendly", 3: "Destitute", 4: "Impudent", 5: "Ugly", 6: "Disguised", 7: "Crafty", 8: "Dying", 9: "Possessed", 10: "Wicked", 11: "Dangerous", 12: "Powerful"],
-                                                    87: [1: "Friendly", 2: "Foolish", 3: "Destitute", 4: "Handsome", 5: "Disguised", 6: "Wealthy", 7: "Imprisoned", 8: "Mad", 9: "Vengeful", 10: "Vengeful", 11: "Wicked", 12: "Powerful"],
-                                                    88: [1: "Kindly", 2: "Needy", 3: "Bumbling", 4: "Bumbling", 5: "Lovesick", 6: "Disguised", 7: "Crafty", 8: "Vengeful", 9: "Evil", 10: "Powerful", 11: "Mighty", 12: "Mighty"],
-                                                    90: [1: "Friendly", 2: "Foolish", 3: "Garrulous", 4: "Destitute", 5: "False", 6: "Disguised", 7: "Wise", 8: "Imprisoned", 9: "Enchanted", 10: "Wicked", 11: "Mad", 12: "Powerful"],
-                                                    91: [1: "Toothless", 2: "Destitute", 3: "Dying", 4: "Diseased", 5: "Diseased", 6: "Enchanted", 7: "Crafty", 8: "Possessed", 9: "Hypnotic", 10: "Hideous", 11: "Insane", 12: "Dangerous"],
-                                                    92: [1: "Happy", 2: "Foolish", 3: "Greedy", 4: "Drunken", 5: "Drunken", 6: "Disguised", 7: "Crafty", 8: "Crafty", 9: "Disguised", 10: "Armed", 11: "Mad", 12: "Wicked"],
-                                                    93: [1: "Friendly", 2: "Foolish", 3: "Destitute", 4: "Lonely", 5: "Disguised", 6: "Wealthy", 7: "Vengeful", 8: "Wicked", 9: "Mad", 10: "Mad", 11: "Enchanted", 12: "Powerful"],
-                                                    94: [1: "Kindly", 2: "Kindly", 3: "Trapped", 4: "Lovesick", 5: "Lovesick", 6: "Vengeful", 7: "Evil", 8: "Evil", 9: "Noble", 10: "Learned", 11: "Demonic", 12: "All-Powerful"],
-                                                    95: [1: "Kindly", 2: "Lovesick", 3: "Bumbling", 4:"Noble", 5: "Evil", 6: "Crafty", 7: "Disguised", 8: "Vengeful", 9: "Mad", 10: "Doomed", 11: "Mighty", 12: "All-Powerful"],
-                                                    97: [1: "Happy", 2: "Needy", 3: "Greedy", 4: "Foolish", 5: "Foolish", 6: "Lovesick", 7: "Disguised", 8: "Disguised", 9: "Crafty", 10: "Armed", 11: "Mad", 12: "Wicked"],
-                                                    98: [1: "Friendly", 2: "Foolish", 3: "Destitute", 4: "False", 5: "Garrulous", 6: "Wise", 7: "Imprisoned", 8: "Vengeful", 9: "Mad", 10: "Mad", 11: "Doomsaying", 12: "Powerful"],
-                                                    99: [1: "Friendly", 2: "Foolish", 3: "Destitute", 4: "Wise", 5: "Imprisoned", 6: "Healer", 7: "Healer", 8: "Healer", 9: "Vengeful", 10: "Mad", 11: "Wicked", 12: "Powerful"],
-                                                    100: [1: "Impudent", 2: "Dying", 3: "Diseased", 4: "Crafty", 5: "Disguised", 6: "Wicked", 7: "Hypnotic", 8: "Hideous", 9: "Hideous", 10: "Enchanted", 11: "Dangerous", 12: "Powerful"],
-                                                    101: [1: "Friendly", 2: "Impudent", 3: "Ugly", 4: "Destitute", 5: "Disguised", 6: "Drunken", 7: "Lovesick", 8: "Dying", 9: "Diseased", 10: "Heart-rending", 11: "Possessed", 12: "Insane"],
-                                                    102: [1: "Friendly", 2: "Handsome", 3: "Lonely", 4: "Lovesick", 5: "Disguised", 6: "Imprisoned", 7: "Wealthy", 8: "Enchanted", 9: "Mad", 10: "Wicked", 11: "Wicked", 12: "Powerful"],
-                                                    105: [1: "Destitute", 2: "Drunken", 3: "Diseased", 4: "Impudent", 5: "Dying", 6: "Heart-rending", 7: "Crafty", 8: "Insane", 9: "Wicked", 10: "Enchanted", 11: "Hypnotic", 12: "Powerful"],
-                                                    106: [1: "Happy", 2: "Wise", 3: "Skillful", 4: "Drunken", 5: "Wealthy", 6: "Repentant", 7: "Armed", 8: "Crafty", 9: "Greedy", 10: "Wicked", 11: "Powerful", 12: "Powerful"],
-                                                    107: [1: "Wise", 2: "Needy", 3: "Busy", 4: "Drunken", 5: "Runaway", 6: "Armed", 7: "Crafty", 8: "Adulterous", 9: "Mad", 10: "Wicked", 11: "Wicked", 12: "Powerful"],
-                                                    108: [1: "Happy", 2: "Destitute", 3: "Lovesick", 4: "Foolish", 5: "Wealthy", 6: "Armed", 7: "Disguised", 8: "Greedy", 9: "Adulterous", 10: "Crafty", 11: "Wicked", 12: "Wicked"],
-                                                    109: [1: "Friendly", 2: "Lost", 3: "Beautiful", 4: "Imprisoned", 5: "Destitute", 6: "Disguised", 7: "Wealthy", 8: "Enchanted", 9: "Vengeful", 10: "Wicked", 11: "Mad", 12: "Powerful"],
-                                                    110: [1: "Friendly", 2: "Lonely", 3: "Lovesick", 4: "Beautiful", 5: "Beautiful", 6: "Lost", 7: "Imprisoned", 8: "Disguised", 9: "Vengeful", 10: "Wicked", 11: "Powerful", 12: "Powerful"],
-                                                    113: [1: "Friendly", 2: "Lovesick", 3: "Beautiful", 4: "Beautiful", 5: "Wealthy", 6: "Wealthy", 7: "Lost", 8: "Imprisoned", 9: "Mad", 10: "Wicked", 11: "Enchanted", 12: "Powerful"],
-                                                    114: [1: "Kindly", 2: "Needy", 3: "Bumbling", 4: "Self-Sacrificial", 5: "Beautiful", 6: "Noble", 7: "Learned", 8: "Disguised", 9: "Crafty", 10: "Mad", 11: "Evil", 12: "Powerful"],
-                                                    115: [1: "Kindly", 2: "Bumbling", 3: "Beautiful", 4: "Noble", 5: "Disguised", 6: "Crafty", 7: "Doomed", 8: "Vengeful", 9: "Mad", 10: "Evil", 11: "Powerful", 12: "Mighty"],
-                                                    116: [1: "Kindly", 2: "Lovesick", 3: "Beautiful", 4: "Trapped", 5: "Vengeful", 6: "Evil", 7: "Evil", 8: "Noble", 9: "Noble", 10: "Learned", 11: "Demonic", 12: "All-Powerful"],
-                                                    117: [1: "Kindly", 2: "Bumbling", 3: "Lovesick", 4: "Beautiful", 5: "Beautiful", 6: "Vengeful", 7: "Vengeful", 8: "Mad", 9: "Evil", 10: "Mighty", 11: "Mighty", 12: "All-Powerful"],
-                                                    118: [1:"Kindly", 2: "Learned", 3: "Learned", 4: "Lovesick", 5:"Trapped", 6: "Trapped", 7: "Angry", 8: "Demonic", 9: "Evil", 10: "Vengeful", 11: "All-Powerful", 12: "All-Powerful"],
-                                                    119: [1:"Lovesick", 2: "Lovesick", 3: "Trapped", 4: "Trapped", 5: "Angry", 6: "Kindly", 7: "Demonic", 8: "Vengeful", 9: "Evil", 10: "Noble", 11: "Noble", 12: "All-Powerful"],
-                                                    120: [1: "Angry", 2: "Lovesick", 3: "Trapped", 4: "Beautiful", 5: "Beautiful", 6: "Noble", 7: "Learned", 8: "Learned", 9: "Vengeful", 10: "Kindly", 11: "Evil", 12: "All-Powerful"],
-                                                    121: [1: "Kindly", 2: "Kindly", 3: "Beautiful", 4: "Noble", 5: "Noble", 6: "All-Powerful", 7: "All-Powerful", 8: "Vengeful", 9: "Lovesick", 10: "Evil", 11: "Demonic", 12: "Trapped"]
-    ]
+    let encounterAdjective: [Int:[String]] = [84: ["Kindly", "Bumbling", "Needy", "Needy", "Disguised", "Trapped", "Mad", "Mad", "Evil", "Vengeful", "Doomed", "Mighty"],
+                                             85: ["Lonely", "Garrulous", "Destitute", "Foolish", "Friendly", "Imprisoned", "Disguised", "Mad", "Vengeful", "Wicked", "Enchanted", "Enchanted"],
+                                             86: ["Friendly", "Friendly", "Destitute", "Impudent", "Ugly", "Disguised", "Crafty", "Dying", "Possessed", "Wicked", "Dangerous", "Powerful"],
+                                             87: ["Friendly", "Foolish", "Destitute", "Handsome", "Disguised", "Wealthy", "Imprisoned", "Mad", "Vengeful", "Vengeful", "Wicked", "Powerful"],
+                                             88: ["Kindly", "Needy", "Bumbling", "Bumbling", "Lovesick", "Disguised", "Crafty", "Vengeful", "Evil", "Powerful", "Mighty", "Mighty"],
+                                             90: ["Friendly", "Foolish", "Garrulous", "Destitute", "False", "Disguised", "Wise", "Imprisoned", "Enchanted", "Wicked", "Mad", "Powerful"],
+                                             91: ["Toothless", "Destitute", "Dying", "Diseased", "Diseased", "Enchanted", "Crafty", "Possessed", "Hypnotic", "Hideous", "Insane", "Dangerous"],
+                                             92: ["Happy", "Foolish", "Greedy", "Drunken", "Drunken", "Disguised", "Crafty", "Crafty", "Disguised", "Armed", "Mad", "Wicked"],
+                                             93: ["Friendly", "Foolish", "Destitute", "Lonely", "Disguised", "Wealthy", "Vengeful", "Wicked", "Mad", "Mad", "Enchanted", "Powerful"],
+                                             94: ["Kindly", "Kindly", "Trapped", "Lovesick", "Lovesick", "Vengeful", "Evil", "Evil", "Noble", "Learned", "Demonic", "All-Powerful"],
+                                             95: ["Kindly", "Lovesick", "Bumbling", "Noble", "Evil", "Crafty", "Disguised", "Vengeful", "Mad", "Doomed", "Mighty", "All-Powerful"],
+                                             97: ["Happy", "Needy", "Greedy", "Foolish", "Foolish", "Lovesick", "Disguised", "Disguised", "Crafty", "Armed", "Mad", "Wicked"],
+                                             98: ["Friendly", "Foolish", "Destitute", "False", "Garrulous", "Wise", "Imprisoned", "Vengeful", "Mad", "Mad", "Doomsaying", "Powerful"],
+                                             99: ["Friendly", "Foolish", "Destitute", "Wise", "Imprisoned", "Healer", "Healer", "Healer", "Vengeful", "Mad", "Wicked", "Powerful"],
+                                             100: ["Impudent", "Dying", "Diseased", "Crafty", "Disguised", "Wicked", "Hypnotic", "Hideous", "Hideous", "Enchanted", "Dangerous", "Powerful"],
+                                             101: ["Friendly", "Impudent", "Ugly", "Destitute", "Disguised", "Drunken", "Lovesick", "Dying", "Diseased", "Heart-rending", "Possessed", "Insane"],
+                                             102: ["Friendly", "Handsome", "Lonely", "Lovesick", "Disguised", "Imprisoned", "Wealthy", "Enchanted", "Mad", "Wicked", "Wicked", "Powerful"],
+                                             105: ["Destitute", "Drunken", "Diseased", "Impudent", "Dying", "Heart-rending", "Crafty", "Insane", "Wicked", "Enchanted", "Hypnotic", "Powerful"],
+                                             106: ["Happy", "Wise", "Skillful", "Drunken", "Wealthy", "Repentant", "Armed", "Crafty", "Greedy", "Wicked", "Powerful", "Powerful"],
+                                             107: ["Wise", "Needy", "Busy", "Drunken", "Runaway", "Armed", "Crafty", "Adulterous", "Mad", "Wicked", "Wicked", "Powerful"],
+                                             108: ["Happy", "Destitute", "Lovesick", "Foolish", "Wealthy", "Armed", "Disguised", "Greedy", "Adulterous", "Crafty", "Wicked", "Wicked"],
+                                             109: ["Friendly", "Lost", "Beautiful", "Imprisoned", "Destitute", "Disguised", "Wealthy", "Enchanted", "Vengeful", "Wicked", "Mad", "Powerful"],
+                                             110: ["Friendly", "Lonely", "Lovesick", "Beautiful", "Beautiful", "Lost", "Imprisoned", "Disguised", "Vengeful", "Wicked", "Powerful", "Powerful"],
+                                             113: ["Friendly", "Lovesick", "Beautiful", "Beautiful", "Wealthy", "Wealthy", "Lost", "Imprisoned", "Mad", "Wicked", "Enchanted", "Powerful"],
+                                             114: ["Kindly", "Needy", "Bumbling", "Self-Sacrificial", "Beautiful", "Noble", "Learned", "Disguised", "Crafty", "Mad", "Evil", "Powerful"],
+                                             115: ["Kindly", "Bumbling", "Beautiful", "Noble", "Disguised", "Crafty", "Doomed", "Vengeful", "Mad", "Evil", "Powerful", "Mighty"],
+                                             116: ["Kindly", "Lovesick", "Beautiful", "Trapped", "Vengeful", "Evil", "Evil", "Noble", "Noble", "Learned", "Demonic", "All-Powerful"],
+                                             117: ["Kindly", "Bumbling", "Lovesick", "Beautiful", "Beautiful", "Vengeful", "Vengeful", "Mad", "Evil", "Mighty", "Mighty", "All-Powerful"],
+                                             118: ["Kindly", "Learned", "Learned", "Lovesick", "Trapped", "Trapped", "Angry", "Demonic", "Evil", "Vengeful", "All-Powerful", "All-Powerful"],
+                                             119: ["Lovesick", "Lovesick", "Trapped", "Trapped", "Angry", "Kindly", "Demonic", "Vengeful", "Evil", "Noble", "Noble", "All-Powerful"],
+                                             120: ["Angry", "Lovesick", "Trapped", "Beautiful", "Beautiful", "Noble", "Learned", "Learned", "Vengeful", "Kindly", "Evil", "All-Powerful"],
+                                             121: ["Kindly", "Kindly", "Beautiful", "Noble", "Noble", "All-Powerful", "All-Powerful", "Vengeful", "Lovesick", "Evil", "Demonic", "Trapped"]]
     
     //function to get the random encounter 
     func getRandomEncounter(_ encounterNumber: Int, dieRoll: Int) -> [String] {
@@ -1197,10 +1112,15 @@ struct RandomEncounters {
         
         //check and make sure die roll is a valid number 
         if dieRoll > 0 && dieRoll < 13 {
-            if let chosenList = encounterCharacter[encounterNumber] as [String: String]? {
-                character = chosenList["character"]
-                matrix = chosenList["matrix"]
-                adjective = encounterAdjective[encounterNumber]![dieRoll]!
+            if let chosenList = encounterCharacter[encounterNumber] as [String]? {
+                character = chosenList[0]
+                matrix = chosenList[1]
+                if let adjList = encounterAdjective[encounterNumber] as [String]? {
+                    adjective = adjList[dieRoll-1]
+                }
+                else {
+                    print("RandomEncounters.swift could not find the character adjective list ", encounterNumber)
+                }
                 
                 encounter = [adjective, character, matrix]
 

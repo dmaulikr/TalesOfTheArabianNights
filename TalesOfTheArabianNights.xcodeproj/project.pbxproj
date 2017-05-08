@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2E7279D41EB2B3D000420AD6 /* EncounterReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7279D31EB2B3D000420AD6 /* EncounterReactionViewController.swift */; };
 		2E7279D61EB2B3E000420AD6 /* RandomEncounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7279D51EB2B3E000420AD6 /* RandomEncounters.swift */; };
+		2E863D4B1EBBB23A00916695 /* RevealResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E863D4A1EBBB23A00916695 /* RevealResultViewController.swift */; };
+		2E863D4D1EBBE32400916695 /* ImprisonedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E863D4C1EBBE32400916695 /* ImprisonedViewController.swift */; };
+		2E863D4F1EBBE7EA00916695 /* MatrixNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E863D4E1EBBE7EA00916695 /* MatrixNViewController.swift */; };
+		2EB360E31EB7F88F00B64B62 /* ReactionMatrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB360E21EB7F88F00B64B62 /* ReactionMatrices.swift */; };
 		2EFFBA001EAECD32003B2F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB9FF1EAECD32003B2F55 /* AppDelegate.swift */; };
 		2EFFBA021EAECD32003B2F55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFBA011EAECD32003B2F55 /* MainViewController.swift */; };
 		2EFFBA051EAECD32003B2F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFBA031EAECD32003B2F55 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		2E7279D31EB2B3D000420AD6 /* EncounterReactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EncounterReactionViewController.swift; path = TalesOfTheArabianNights/EncounterReactionViewController.swift; sourceTree = SOURCE_ROOT; };
 		2E7279D51EB2B3E000420AD6 /* RandomEncounters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomEncounters.swift; path = "Supporting Files/RandomEncounters.swift"; sourceTree = "<group>"; };
+		2E863D4A1EBBB23A00916695 /* RevealResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealResultViewController.swift; sourceTree = "<group>"; };
+		2E863D4C1EBBE32400916695 /* ImprisonedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprisonedViewController.swift; sourceTree = "<group>"; };
+		2E863D4E1EBBE7EA00916695 /* MatrixNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixNViewController.swift; sourceTree = "<group>"; };
+		2EB360E21EB7F88F00B64B62 /* ReactionMatrices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionMatrices.swift; path = "Supporting Files/ReactionMatrices.swift"; sourceTree = "<group>"; };
 		2EFFB9FC1EAECD32003B2F55 /* TalesOfTheArabianNights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalesOfTheArabianNights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFFB9FF1EAECD32003B2F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EFFBA011EAECD32003B2F55 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +74,11 @@
 				2EFFBA011EAECD32003B2F55 /* MainViewController.swift */,
 				2EFFBA141EAFE5CF003B2F55 /* DieRollViewController.swift */,
 				2E7279D31EB2B3D000420AD6 /* EncounterReactionViewController.swift */,
+				2E863D4A1EBBB23A00916695 /* RevealResultViewController.swift */,
 				2E7279D51EB2B3E000420AD6 /* RandomEncounters.swift */,
+				2EB360E21EB7F88F00B64B62 /* ReactionMatrices.swift */,
+				2E863D4C1EBBE32400916695 /* ImprisonedViewController.swift */,
+				2E863D4E1EBBE7EA00916695 /* MatrixNViewController.swift */,
 				2EFFBA031EAECD32003B2F55 /* Main.storyboard */,
 				2EFFBA091EAECD32003B2F55 /* Assets.xcassets */,
 				2EFFBA0B1EAECD32003B2F55 /* LaunchScreen.storyboard */,
@@ -149,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E863D4B1EBBB23A00916695 /* RevealResultViewController.swift in Sources */,
+				2EB360E31EB7F88F00B64B62 /* ReactionMatrices.swift in Sources */,
 				2E7279D41EB2B3D000420AD6 /* EncounterReactionViewController.swift in Sources */,
 				2EFFBA151EAFE5CF003B2F55 /* DieRollViewController.swift in Sources */,
+				2E863D4F1EBBE7EA00916695 /* MatrixNViewController.swift in Sources */,
 				2E7279D61EB2B3E000420AD6 /* RandomEncounters.swift in Sources */,
+				2E863D4D1EBBE32400916695 /* ImprisonedViewController.swift in Sources */,
 				2EFFBA021EAECD32003B2F55 /* MainViewController.swift in Sources */,
 				2EFFBA081EAECD32003B2F55 /* TalesOfTheArabianNights.xcdatamodeld in Sources */,
 				2EFFBA001EAECD32003B2F55 /* AppDelegate.swift in Sources */,
@@ -280,6 +296,7 @@
 				DEVELOPMENT_TEAM = T2QJ538U4M;
 				INFOPLIST_FILE = TalesOfTheArabianNights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gracethompson.TalesOfTheArabianNights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

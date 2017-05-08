@@ -78,7 +78,8 @@ class DieRollViewController: UIViewController, UITextFieldDelegate {
             }
             if checkDieRoll(dieRoll) {
                 print("Valid Die Roll entered: ", dieRoll)
-                //perform segue here
+                //perform segue to encounter results 
+                performSegue(withIdentifier: "revealEncounterSegue", sender: self)
             } else {
                 let error = UIAlertController(title: "Invalid Die Roll", message: "You've entered an invalid die roll result. Please try again.", preferredStyle: .alert)
                 let response = UIAlertAction(title: "OK", style: .default, handler: nil)

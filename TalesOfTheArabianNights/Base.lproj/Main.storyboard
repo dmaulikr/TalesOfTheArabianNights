@@ -99,6 +99,9 @@
                                         <state key="normal" title="Imprisoned">
                                             <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="imprisonedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rao-Oz-UQt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-BW-cuR">
                                         <rect key="frame" x="83.3333333333333" y="385" width="145" height="40"/>
@@ -111,6 +114,9 @@
                                         <state key="normal" title="Matrix N">
                                             <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="matrixNButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VrE-dk-oiX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -130,11 +136,162 @@
                         <outlet property="imprisonedButton" destination="kkN-e4-sDx" id="seq-uN-7Zi"/>
                         <outlet property="matrixNButton" destination="Tku-BW-cuR" id="qEp-Dp-c0A"/>
                         <segue destination="oNs-zt-rzL" kind="show" identifier="dieRollSegue" id="RZL-XH-JeC"/>
+                        <segue destination="rtx-d1-02U" kind="show" identifier="imprisonedSegue" id="Ay7-ug-53N"/>
+                        <segue destination="ZbD-Pc-iQr" kind="show" identifier="matrixNSegue" id="VXO-we-Tkv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968" y="121"/>
+            <point key="canvasLocation" x="904" y="152"/>
+        </scene>
+        <!--Imprisoned View Controller-->
+        <scene sceneID="7nM-zP-5b5">
+            <objects>
+                <viewController id="rtx-d1-02U" customClass="ImprisonedViewController" customModule="TalesOfTheArabianNights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n2c-ZU-QoH"/>
+                        <viewControllerLayoutGuide type="bottom" id="QCG-mh-JhY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ci0-H5-WG8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bZ6-nQ-1OM">
+                                <rect key="frame" x="34" y="67" width="346" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are imprisoned!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xe-hk-QhN">
+                                        <rect key="frame" x="63" y="0.0" width="221" height="27"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jailer Nature Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15X-qz-y06">
+                                        <rect key="frame" x="106" y="42" width="134" height="18"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CA8-Lk-9gP">
+                                        <rect key="frame" x="13" y="75" width="320" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rtx-d1-02U" id="qRr-6S-R8u"/>
+                                            <outlet property="delegate" destination="rtx-d1-02U" id="ZWk-Rg-h6g"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF6-yf-qbe">
+                                        <rect key="frame" x="128" y="306" width="91" height="18"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-a3-Zsa">
+                                        <rect key="frame" x="13" y="339" width="320" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rtx-d1-02U" id="kB9-Rs-Qsl"/>
+                                            <outlet property="delegate" destination="rtx-d1-02U" id="KLK-xG-H1P"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtl-6w-CMf">
+                                        <rect key="frame" x="94" y="570" width="158" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Attempt Action">
+                                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="attemptActionButtonPressed:" destination="rtx-d1-02U" eventType="touchUpInside" id="YMk-Fy-eiY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="owy-yk-e7g"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZ6-nQ-1OM" firstAttribute="centerX" secondItem="Ci0-H5-WG8" secondAttribute="centerX" id="FqS-5Q-tCT"/>
+                            <constraint firstItem="bZ6-nQ-1OM" firstAttribute="centerY" secondItem="Ci0-H5-WG8" secondAttribute="centerY" id="wFX-5a-TfJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionPicker" destination="hr8-a3-Zsa" id="SNj-kj-yEL"/>
+                        <outlet property="actionTypeLabel" destination="TF6-yf-qbe" id="9U6-nv-xLD"/>
+                        <outlet property="attemptActionButton" destination="mtl-6w-CMf" id="Kgf-zT-hv5"/>
+                        <outlet property="jailerPicker" destination="CA8-Lk-9gP" id="9JI-dL-R2H"/>
+                        <outlet property="jailerTypeLabel" destination="15X-qz-y06" id="1Xh-eL-sZF"/>
+                        <segue destination="FcV-H2-LpB" kind="show" identifier="revealImprisonedResultSegue" id="mvw-IN-xMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agB-gU-w7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408.69565217391306" y="837.22826086956525"/>
+        </scene>
+        <!--MatrixN View Controller-->
+        <scene sceneID="Rh8-cc-Rv8">
+            <objects>
+                <viewController id="ZbD-Pc-iQr" customClass="MatrixNViewController" customModule="TalesOfTheArabianNights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z4B-Tm-iDF"/>
+                        <viewControllerLayoutGuide type="bottom" id="tmM-vq-JFZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vnh-Kz-Hyy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="m83-bb-ftj">
+                                <rect key="frame" x="32" y="193.66666666666663" width="350" height="348.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your encounter type and chosen action:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="37w-lH-f8i">
+                                        <rect key="frame" x="19.333333333333343" y="0.0" width="311.33333333333337" height="39.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-wE-eRz">
+                                        <rect key="frame" x="15" y="69" width="320" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ZbD-Pc-iQr" id="HCR-s9-Hsd"/>
+                                            <outlet property="delegate" destination="ZbD-Pc-iQr" id="EhX-y0-JXX"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2L-Ke-kvR">
+                                        <rect key="frame" x="96.666666666666671" y="315.66666666666663" width="157" height="33.000000000000057"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Perform Action">
+                                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="performActionPressed:" destination="ZbD-Pc-iQr" eventType="touchUpInside" id="cOW-6W-Aun"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="hI0-A4-yiN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m83-bb-ftj" firstAttribute="centerX" secondItem="Vnh-Kz-Hyy" secondAttribute="centerX" id="Prp-vD-FSO"/>
+                            <constraint firstItem="m83-bb-ftj" firstAttribute="centerY" secondItem="Vnh-Kz-Hyy" secondAttribute="centerY" id="u8P-UU-DBf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="matrixNPicker" destination="yOa-wE-eRz" id="NpH-cF-1x5"/>
+                        <outlet property="performActionButton" destination="L2L-Ke-kvR" id="YSm-x8-n4v"/>
+                        <segue destination="FcV-H2-LpB" kind="show" identifier="revealMatrixNResultSegue" id="slG-bo-bBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baf-dp-enX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="832"/>
         </scene>
         <!--Die Roll View Controller-->
         <scene sceneID="K5Y-IF-HpD">
@@ -221,27 +378,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1Wi-g1-6S8">
-                                <rect key="frame" x="47" y="144" width="320" height="449"/>
+                                <rect key="frame" x="47" y="144.33333333333331" width="320" height="447.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encounter Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Vn-vyl">
-                                        <rect key="frame" x="87" y="0.0" width="146" height="23"/>
-                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encounter Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Vn-vyl">
+                                        <rect key="frame" x="85.333333333333357" y="0.0" width="149.66666666666663" height="22.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What will you do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-9j-29l">
-                                        <rect key="frame" x="78" y="73" width="164" height="23"/>
+                                        <rect key="frame" x="78.333333333333343" y="72.333333333333314" width="163.66666666666669" height="22.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FqR-oi-XJM">
-                                        <rect key="frame" x="0.0" y="146" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="144.66666666666666" width="320" height="215.99999999999997"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Ps1-lX-GNk" id="WLE-ug-VmP"/>
+                                            <outlet property="delegate" destination="Ps1-lX-GNk" id="L6O-Mt-UFe"/>
+                                        </connections>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWU-Su-r47">
-                                        <rect key="frame" x="68" y="412" width="184" height="37"/>
+                                        <rect key="frame" x="68" y="410.66666666666663" width="184" height="37"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="24"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
@@ -253,8 +414,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="0pa-Vc-nG7"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Encounter #: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-tm-6Es">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Encounter #: " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-tm-6Es">
                                 <rect key="frame" x="20" y="695" width="174" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
@@ -270,13 +434,146 @@
                     </view>
                     <connections>
                         <outlet property="encounterLabel" destination="AGz-Vn-vyl" id="emr-eA-BSc"/>
+                        <outlet property="encounterNumLabel" destination="Zlk-tm-6Es" id="xLr-A6-axX"/>
                         <outlet property="performActionbutton" destination="EWU-Su-r47" id="Hn3-TJ-Qlu"/>
                         <outlet property="reactionPicker" destination="FqR-oi-XJM" id="Lwf-K5-wto"/>
+                        <segue destination="FcV-H2-LpB" kind="show" identifier="revealResultSegue" id="gIG-Ed-rbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyj-4T-6cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2577" y="132"/>
+        </scene>
+        <!--Reveal Result View Controller-->
+        <scene sceneID="DbC-B7-QR5">
+            <objects>
+                <viewController id="FcV-H2-LpB" customClass="RevealResultViewController" customModule="TalesOfTheArabianNights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Pz-Uj-xB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="r5k-H6-9sG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LP1-Yk-RKp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ncg-pl-Esa">
+                                <rect key="frame" x="51.333333333333343" y="142.33333333333331" width="312.66666666666663" height="451.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've chosen to ... !!!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="16" preferredMaxLayoutWidth="350" translatesAutoresizingMaskIntoConstraints="NO" id="GxB-k4-hxa">
+                                        <rect key="frame" x="59.333333333333343" y="0.0" width="193.66666666666663" height="22.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll the destiny die for your results" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="350" translatesAutoresizingMaskIntoConstraints="NO" id="eYy-Zk-o3h">
+                                        <rect key="frame" x="0.0" y="72.333333333333314" width="312.66666666666669" height="22.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y1g-PP-y63">
+                                        <rect key="frame" x="56.333333333333343" y="144.66666666666666" width="199.66666666666663" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al3-6O-jxy">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.999999999999986" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Fyg-rp-Rrx"/>
+                                                    <constraint firstAttribute="height" constant="40" id="xEo-3Y-7PO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="38"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Paragraph #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-1E-zjo">
+                                                <rect key="frame" x="54.999999999999986" y="8.6666666666666856" width="144.66666666666663" height="22.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="D37-kS-cD9">
+                                        <rect key="frame" x="56.333333333333343" y="234.66666666666666" width="199.66666666666663" height="39.999999999999972"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKZ-bU-Pwg">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.999999999999986" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="HRR-Hr-Z6w"/>
+                                                    <constraint firstAttribute="width" constant="40" id="edH-vB-gTj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="38"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Paragraph #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-hI-aDz">
+                                                <rect key="frame" x="54.999999999999986" y="8.6666666666666856" width="144.66666666666663" height="22.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-KC-HR8">
+                                        <rect key="frame" x="56.333333333333343" y="324.66666666666663" width="199.66666666666663" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isa-Bx-zSB">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.999999999999986" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3hh-0P-H33"/>
+                                                    <constraint firstAttribute="height" constant="40" id="a6W-bZ-mLi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="38"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Paragraph #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-bt-xfl">
+                                                <rect key="frame" x="54.999999999999986" y="8.6666666666666856" width="144.66666666666663" height="22.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3K-uA-3Xc">
+                                        <rect key="frame" x="76.333333333333343" y="414.66666666666663" width="160" height="37"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Back to Main">
+                                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="returnButtonPressed:" destination="FcV-H2-LpB" eventType="touchUpInside" id="M3b-AC-Tq0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ncg-pl-Esa" firstAttribute="centerY" secondItem="LP1-Yk-RKp" secondAttribute="centerY" id="AJl-Cp-xBg"/>
+                            <constraint firstItem="ncg-pl-Esa" firstAttribute="centerX" secondItem="LP1-Yk-RKp" secondAttribute="centerX" id="Pnr-W4-UAK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blankLabel" destination="CKZ-bU-Pwg" id="0Y7-1j-haz"/>
+                        <outlet property="blankResultLabel" destination="qaW-hI-aDz" id="iue-gA-rgx"/>
+                        <outlet property="chosenActionLabel" destination="GxB-k4-hxa" id="aKk-CQ-S2U"/>
+                        <outlet property="minusLabel" destination="al3-6O-jxy" id="XIB-UW-Bo8"/>
+                        <outlet property="minusResultLabel" destination="1rV-1E-zjo" id="IKW-yX-fng"/>
+                        <outlet property="paragraphResultLabel" destination="eYy-Zk-o3h" id="m1F-td-gpA"/>
+                        <outlet property="plusLabel" destination="isa-Bx-zSB" id="Cgq-lK-VbW"/>
+                        <outlet property="plusResultLabel" destination="g2q-bt-xfl" id="01J-SQ-LgL"/>
+                        <outlet property="returnButton" destination="s3K-uA-3Xc" id="xzh-c3-udl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMainSegue" id="GIm-xP-QgA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0W7-zF-uCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3332" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xrz-R8-ac6">
@@ -297,5 +594,9 @@
             <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GIm-xP-QgA"/>
+        <segue reference="slG-bo-bBw"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
