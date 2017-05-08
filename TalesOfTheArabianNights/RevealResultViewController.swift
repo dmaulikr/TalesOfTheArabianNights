@@ -3,7 +3,8 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 5/4/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Reveal Result View Controller displays the paragraph results based on destiny die result, showing all three 
+//  in the case that the player has master level talents to use
 //
 
 import UIKit

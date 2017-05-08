@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 4/27/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Encounter Reaction View Controller displays the encounter to the user and displays a list of actions to choose from.
 //
 
 import UIKit
