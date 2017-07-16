@@ -27,7 +27,7 @@ class EncounterReactionViewController: UIViewController, UIPickerViewDelegate, U
     
     @IBOutlet weak var encounterLabel: UILabel!
     
-    //@IBOutlet weak var reactionMatrixLabel: UILabel!
+    @IBOutlet weak var reactionMatrixLabel: UILabel!
     
     @IBOutlet weak var reactionPicker: UIPickerView!
     
@@ -95,7 +95,7 @@ class EncounterReactionViewController: UIViewController, UIPickerViewDelegate, U
             }
         }
         
-        //reactionMatrixLabel.self.text = "See Reaction Matrix \(reactionMatrix!) below"
+        reactionMatrixLabel.self.text = "See Reaction Matrix \(reactionMatrix!)"
 
     }
     
