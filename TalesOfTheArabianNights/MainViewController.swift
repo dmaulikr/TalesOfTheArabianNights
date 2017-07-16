@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 4/24/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Main Page View Controller for Tales of the Arabian Nights companion app
 //
 
 import UIKit

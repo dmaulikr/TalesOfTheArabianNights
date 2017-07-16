@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 4/25/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Die Roll View Controller where user enters their die roll plus any modifiers (number on character location, etc) to determine the encounter
 //
 
 import UIKit

@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 5/4/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Matrix N View Controller displays the Matrix N Encounters and the actions to choose from.
 //
 
 import UIKit

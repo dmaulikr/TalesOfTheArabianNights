@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 5/1/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Tales of the Arabian Nights Matrices of Encounter/Action paragraph results.
 //
 
 import Foundation

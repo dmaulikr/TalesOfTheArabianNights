@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 5/4/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Imprisoned View Controller displays jailer types and action options for imprisoned players.
 //
 
 import UIKit

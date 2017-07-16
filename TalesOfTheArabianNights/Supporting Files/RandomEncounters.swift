@@ -3,7 +3,7 @@
 //  TalesOfTheArabianNights
 //
 //  Created by Grace Thompson on 4/27/17.
-//  Copyright © 2017 Grace Thompson. All rights reserved.
+//  Tales of the Arabian Nights Lists of potential Encounters
 //
 
 import UIKit
